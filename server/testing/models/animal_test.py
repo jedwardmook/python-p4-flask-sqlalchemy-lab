@@ -1,5 +1,5 @@
 from app import app
-from server.models import db, Animal
+from server.models import db, Animal, Enclosure
 
 class TestAnimal:
     '''Animal model in models.py'''
@@ -15,3 +15,9 @@ class TestAnimal:
         a = Animal(name='Phil', species='Rhinoceros')
         assert a.name == 'Phil'
         assert a.species == 'Rhinoceros'
+
+class TestEnclosure:
+    def test_can_be_instantiated(self):
+        e = Enclosure()
+        assert e
+        assert isinstance(e, Enclosure)

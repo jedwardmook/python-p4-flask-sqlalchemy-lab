@@ -10,8 +10,8 @@ class TestApp:
     with app.app_context():
         a_1 = Animal()
         a_2 = Animal()
-        e = Enclosure()
         z = Zookeeper()
+        e = Enclosure()
         e.animals = [a_1, a_2]
         z.animals = [a_1, a_2]
         db.session.add_all([a_1, a_2, e, z])
